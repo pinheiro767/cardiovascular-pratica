@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#08090b" />
+  <title>CardioRoteiro — Sistema Cardiovascular</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-glow"></div>
+    <div class="topbar">
+      <button id="themeBtn" class="pill">☀️/🌙 Tema</button>
+      <button id="installBtn" class="pill hidden">⬇️ Baixar app</button>
+    </div>
+
+    <section class="title-card">
+      <p class="kicker">Universidade Estadual de Maringá</p>
+      <h1>CardioRoteiro</h1>
+      <h2>Sistema Cardiovascular</h2>
+      <p><strong>Disciplina:</strong> Anatomia Humana</p>
+      <p><strong>Professora:</strong> Cláudia Regina Pinheiro Lopes</p>
+    </section>
+  </header>
+
+  <main>
+    <section class="panel intro">
+      <h3>Objetivos da prática</h3>
+      <p>Abra o roteiro, fotografe modelos anatômicos, peças ou esquemas, insira anotações abaixo de cada imagem, marque a estrutura estudada, responda perguntas-guia e gere um PDF final com identificação da aula.</p>
+      <div class="actions-grid">
+        <button id="openGuideBtn">📘 Abrir roteiro</button>
+        <button id="pdfBtn">📄 Gerar PDF</button>
+        <button id="clearBtn" class="danger">🗑️ Limpar dados</button>
+      </div>
+    </section>
+
+    <section id="guide" class="panel guide hidden">
+      <h3>Roteiro por etapas</h3>
+      <ol>
+        <li>Coração externo: base, ápice, faces e vasos da base.</li>
+        <li>Câmaras cardíacas: átrios, ventrículos, septos, fossa oval e músculos pectíneos.</li>
+        <li>Valvas: atrioventriculares e semilunares; cordas tendíneas e músculos papilares.</li>
+        <li>Circulação pulmonar: tronco pulmonar, artérias pulmonares e veias pulmonares.</li>
+        <li>Circulação sistêmica: aorta e distribuição arterial corporal.</li>
+        <li>Artérias: subclávia, axilar, braquial, radial, ulnar, renal, ilíacas e femoral.</li>
+        <li>Veias, capilares e aplicação clínica.</li>
+      </ol>
+      <p class="refs"><strong>Referências:</strong> Moore (2020), Sobotta (2013), Dangelo & Fattini (2011), Miranda Neto (2008) e Terminologia Anatômica (2001).</p>
+    </section>
+
+    <section class="panel">
+      <h3>Estrutura estudada</h3>
+      <div id="categoryBox" class="chips"></div>
+    </section>
+
+    <section class="panel">
+      <h3>Perguntas-guia</h3>
+      <div id="questionsBox"></div>
+    </section>
+
+    <section class="panel">
+      <h3>Registro fotográfico por item anatômico</h3>
+      <p class="hint">Cada card aceita quantas fotos e arquivos forem necessários. As imagens ficam salvas localmente no navegador do celular.</p>
+      <div id="itemsGrid" class="items-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>CardioRoteiro — PWA acadêmico para aula prática de Anatomia Humana.</p>
+  </footer>
+</body>
+</html>
